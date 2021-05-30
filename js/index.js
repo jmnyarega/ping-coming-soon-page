@@ -19,6 +19,11 @@ const validate = () => {
   if (!email.value || !emailIsValid(email.value)) {
     errorContainer.style.display = "block";
     email.style.border = `1px solid ${colors.getPropertyValue("--light-red")}`;
+  }
+
+  if (!email.value) {
+    errorContainer.innerText = "Email is required!";
+  } else if (!emailIsValid(email.value)) {
     errorContainer.innerText = "Please provide a valid email address!";
   }
 
