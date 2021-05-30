@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://use.fontawesome.com/4ac2e5dc4b.js"></script>
+  </head>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="logo" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+      <div class="intro">
+        <div class="heading">
+          <span>We are launching</span>
+          <span>soon!</span>
+        </div>
+        <p class="text">Subscribe and get notified</p>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+      <form class="form" onsubmit="return validate()">
+        <div class="form-control">
+          <input
+            type="text"
+            placeholder="Your email address..."
+            id="email"
+            class="subscribe__email"
+          />
+          <span id="error-email">Error</span>
+        </div>
+        <button type="submit" class="button">Notify Me</button>
+      </form>
+      <div class="dashboard-preview">
+        <img src="./images/illustration-dashboard.png" alt="dashboard" />
+      </div>
+      <div class="social">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <p class="footer-text">&copy; Copyright Ping. All rights reserved.</p>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
+
