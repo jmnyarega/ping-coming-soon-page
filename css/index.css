@@ -1,0 +1,189 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1.25rem;
+
+  max-width: 1000px;
+  width: 80%;
+  margin: 5% auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+ * Typography
+ *
+ */
+
+main {
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.heading > span:first-child {
+  color: var(--gray);
+}
+
+.heading > span:last-child {
+  font-weight: bold;
+}
+
+.intro > p {
+  color: var(--very-dark-blue);
+}
+
+#error-email {
+  color: var(--light-red);
+  font-style: italic;
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+
+  display: none;
+}
+
+/*
+ * Layouts + spacing
+ *
+ */
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  margin: 1rem;
+
+  color: var(--blue);
+}
+
+.intro {
+  margin: 2rem 0;
+}
+
+.form {
+  margin: 1rem 0 2rem 0;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.dashboard-preview {
+  margin: 3rem 0 8rem 0;
+}
+/*
+ *
+ * Components
+ *
+ */
+
+.subscribe__email,
+.button {
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 99rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.subscribe__email {
+  border: 1px solid var(--pale-blue);
+  font-weight: 300;
+}
+
+.subscribe__email::placeholder {
+  color: var(--pale-blue);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.subscribe__email:focus {
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  margin-top: 1rem;
+  background-color: var(--blue);
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+i.fa {
+  display: block;
+  border-radius: 99rem;
+  border: 1px solid var(--pale-blue);
+  padding: 1rem;
+  width: calc(3rem + 2px);
+  height: calc(3rem + 2px);
+
+  cursor: pointer;
+}
+
+i.fa:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.footer-text {
+  color: var(--gray);
+}
+
+@media (min-width: 500px) {
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 2rem;
+  }
+
+  .heading {
+    font-size: 4rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .form-control {
+    width: 55%;
+  }
+
+  .button {
+    width: 20%;
+  }
+
+  #error-email {
+    text-align: initial;
+    margin-left: 3rem;
+  }
+}
